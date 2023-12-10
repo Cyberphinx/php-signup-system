@@ -9,6 +9,14 @@
 </head>
 <body>
 
+    <h3>SEARCH</h3>
+
+    <form action="search.php" method="post">
+        <label for="search">Search for user:</label>
+        <input id="search" type="text" name="usersearch" placeholder="Search..." >
+        <button>Search</button>
+    </form>
+
     <h3>SIGN UP</h3>
 
     <form action="includes/formhandler.inc.php" method="post">
