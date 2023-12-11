@@ -1,3 +1,11 @@
+<?php
+
+require_once 'config.php';
+
+$_SESSION["username"] = "Lily Pad";
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,11 +17,15 @@
 </head>
 <body>
 
+    <?php
+        echo $_SESSION["username"];    
+    ?>
+
     <h3>SEARCH</h3>
 
     <form action="search.php" method="post">
         <label for="search">Search for user:</label>
-        <input id="search" type="text" name="usersearch" placeholder="Search..." >
+        <input id="search" type="text" name="usersearch" placeholder="Search...">
         <button>Search</button>
     </form>
 

@@ -1,4 +1,11 @@
 <?php
+    // session security:
+    // validate user data
+    // don't store sensitive info in session variable
+    // delete old session data
+
+    session_start();
+
     if ($_SERVER["REQUEST_METHOD"] == "POST"){
         $userSearch = $_POST["usersearch"];
     
@@ -39,6 +46,9 @@
     <title>Search results</title>
 </head>
 <body>
+    <?php
+        echo $_SESSION["username"];    
+    ?>
     <section>
         <h3>Seach results: </h3>
 

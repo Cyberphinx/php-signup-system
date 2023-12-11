@@ -1,0 +1,17 @@
+{
+  "name": "quintessa/php-signup-system",
+  "type": "project",
+  "autoload": {
+    "psr-4": {
+      "Project\\": "src/"
+    }
+  },
+  "authors": [
+    {
+      "name": "Quintessa"
+    }
+  ],
+  "require-dev": {
+    "phpunit/phpunit": "^10"
+  }
+}

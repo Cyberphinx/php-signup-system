@@ -14,6 +14,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
         $statement = $pdo->prepare($query);
         $statement->bindParam(":username", $username);
         $statement->bindParam(":pwd", $pwd);
+
         
         $statement->execute();
         
