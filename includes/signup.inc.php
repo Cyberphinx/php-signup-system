@@ -6,8 +6,8 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $email = $_POST["email"];
 
     try {
-        require_once 'dbh.inc.php';
         // ordering is important
+        require_once 'dbh.inc.php';
         require_once 'signup_model.inc.php';
         require_once 'signup_contr.inc.php';
 
@@ -27,15 +27,20 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
             $errors["email_used"] = "Email already registered!";
         }
 
+        // start session
         require_once 'config_session.inc.php';
 
         if ($errors) {
+            // set errors in session storage
             $_SESSION["errors_signup"] = $errors;
 
+            // persist the data in the form
             $signupData = ["username" => $username, "email" => $email];
             $_SESSION["signup_data"] = $signupData;
 
+            // redirect back to homepage
             header("Location: ../index.php");
+
             // exit script function
             die();
         }

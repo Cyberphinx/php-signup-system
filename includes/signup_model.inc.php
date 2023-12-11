@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 // MVC (Model View Controller)
 // MODEL takes care of querying database
+
 function get_username(object $pdo, string $username)
 {
     $query = "SELECT username FROM users WHERE username = :username;";

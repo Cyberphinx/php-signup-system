@@ -29,11 +29,13 @@ form {
 .form-error {
     color: #b3261e;
     text-align: center;
+    padding-bottom: 1rem;
 }
 
 .form-success {
     color: #1eb980;
     text-align: center;
+    padding-bottom: 1rem;
 }
 
 label {
